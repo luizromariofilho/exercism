@@ -10,8 +10,6 @@ class ArmstrongNumbers
   end
 
   def include?(number)
-    numbers = number.to_s.split('').map(&:to_i)
-    size = numbers.length
-    numbers.map { |n| n**size }.sum == number
+    number.digits.map { |digit| digit**number.digits.length }.sum == number
   end
 end
