@@ -11,7 +11,6 @@ class Pangram
     def pangram?(sentence)
       return false if sentence.strip.empty?
 
-      # require 'pry'; binding.pry
       (ALPHABETIC - cleared_sentence(sentence)).empty?
     end
 
